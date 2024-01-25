@@ -1,5 +1,5 @@
 from src.mlproject.logger import logging
-from src.mlproject.exception import custome_exception
+from src.mlproject.exception import CustomException
 import sys
 
 if __name__ == "__main__":
@@ -9,4 +9,4 @@ if __name__ == "__main__":
         a = 1/0
     except Exception as e:
         logging.info("custom exception")
-        raise custome_exception(e,sys)    
+        raise CustomException(e,sys)    

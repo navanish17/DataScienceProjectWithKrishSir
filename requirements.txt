@@ -3,4 +3,7 @@ pandas
 matplotlib
 flask
 scikit-learn
+python-dotenv
+mysql-connector-python
+pymysql
 # -e .
