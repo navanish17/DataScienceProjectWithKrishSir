@@ -8,6 +8,8 @@ import pandas as pd
 from dotenv import load_dotenv
 import mysql.connector
 
+
+
 def read_sql_data():
 
     logging.info('Reading sql data here...')
