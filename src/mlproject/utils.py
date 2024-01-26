@@ -6,21 +6,14 @@ from src.mlproject.logger import logging
 from src.mlproject.exception import CustomException
 import pandas as pd
 from dotenv import load_dotenv
-import pymysql
-
-load_dotenv()
-
-host = os.getenv('host')
-user = os.getenv('user')
-password = os.getenv('password')
-db = os.getenv('db')
+import mysql.connector
 
 def read_sql_data():
 
     logging.info('Reading sql data here...')
 
     try:
-        mydb = pymysql.connect(host=host, user=user, password=password, db=db)
+        mydb = mysql.connector.connect(host='localhost', user='root', password='Honor@2002', db='college')
         logging.info('Connection from database has been established', mydb)
 
         #pd.read_sql_query helps us to read our sql data from sql directly
@@ -28,6 +21,6 @@ def read_sql_data():
         print(df.head())
 
         return df
-
+    
     except Exception as e:
         raise CustomException(e,sys)
