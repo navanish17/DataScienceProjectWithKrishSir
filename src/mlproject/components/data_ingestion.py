@@ -7,7 +7,7 @@ from src.mlproject.utils import read_sql_data
 
 from sklearn.model_selection import train_test_split
 
-from dataclasses import dataclass
+from dataclasses import dataclass   
 
 
 @dataclass
